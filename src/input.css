@@ -3,10 +3,18 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
 
-
 @layer base {
-    html{
+    html {
         font-family: 'Nanum Gothic', sans-serif;
-        transition:all .5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .is-active::after{
+      height:100%;
+    }
+
+    .grid-item, .grid-sizer{
+      width:240px;
+      margin:0 5px 5px;
     }
 }

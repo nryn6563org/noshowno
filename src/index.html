@@ -4,12 +4,14 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href="../dist/output.css" rel="stylesheet" />
+        <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+        <script src="https://www.unpkg.com/imagesloaded@5.0.0/imagesloaded.pkgd.min.js"></script>
     </head>
     <body class="h-full">
         <div id="nsn" class="h-full w-full">
-            <header id="header" class="fixed inset-0 h-full w-[250px] border-r-[1px] border-gray-800 bg-[#191A32] shadow-gray-800 z-20">
-                <div class="w-full flex justify-center gap-2.5 border-b-[1px] border-[#d7d7d7] px-5 py-10 dark:border-[#787878]">
-                    <h1 class="h-8 text-[24px] font-bold text-[#121212] text-[#e8e8e8]"><img src="../dist/img/logo.jpg" alt="노쇼노"></h1>
+            <header id="header" class="fixed inset-0 z-20 h-full w-[250px] border-r-[1px] border-gray-800 bg-[#191A32] shadow-gray-800">
+                <div class="flex w-full justify-center gap-2.5 border-b-[1px] border-[#d7d7d7] px-5 py-10 dark:border-[#787878]">
+                    <h1 class="h-8 text-[24px] font-bold text-[#121212] text-[#e8e8e8]"><img src="../dist/img/logo.jpg" alt="노쇼노" /></h1>
                 </div>
                 <!-- //top -->
 
@@ -17,8 +19,8 @@
                 <aside id="globalNavigation" class="mt-10 h-auto w-full px-5">
                     <menu class="block w-full">
                         <a
-                            href="#"
-                            class="relative flex h-[40px] w-full items-center gap-1 overflow-hidden rounded-[8px] border-[1px] border-[#f6f6f6] bg-white px-[10px] text-[16px] font-extrabold leading-[40px] text-[#242424] after:absolute after:right-0 after:z-0 after:h-full after:w-0 after:transition-all after:duration-300 hover:after:w-full shadow-gray-700 after:bg-gray-200 focus:bg-gray-200 pl-[45px]"
+                            href="javascript:;"
+                            class="relative flex h-[40px] w-full items-center gap-1 overflow-hidden rounded-[8px] border-[1px] border-[#f6f6f6] bg-white px-[10px] pl-[45px] text-[16px] font-extrabold leading-[40px] text-[#242424] shadow-gray-700 after:absolute after:right-0 after:z-0 after:h-full after:w-0 after:bg-gray-200 after:transition-all after:duration-300 hover:after:w-full focus:bg-gray-200"
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="z-10 h-[20px] w-[20px]">
                                 <path
@@ -31,225 +33,142 @@
                         </a>
                         <!-- //전체 -->
 
-                        <ul class="mt-5 w-full">
-                            <li class="contents-center min-h-[40px]">
-                                <a href="#" class="flex h-[40px] items-center gap-1 font-bold text-[#e8e8e8]">&middot; 로그인/회원가입</a>
-                                <ul class="px-1 pb-[10px]">
+                        <ul id="buttonGroup" class="mt-5 w-full">
+                            <li class="menu-depth1 contents-center min-h-[40px]">
+                                <a id="member" href="javascript:;" class="flex h-[40px] items-center gap-1 font-bold text-[#e8e8e8]">&middot; 로그인/회원가입</a>
+                                <ul class="buttonGroups px-1 pb-[10px]">
                                     <li class="pl-1">
                                         <a
-                                            href="#"
-                                            class="relative h-4 pl-1.5 text-[13px] leading-4 after:absolute after:left-0 after:top-0 after:h-0 after:w-[2px] after:bg-red-400 after:transition-all after:duration-150 hover:after:h-full focus:after:h-full active:after:h-full text-[#e8e8e8]"
-                                        >
-                                            시작페이지
-                                        </a>
-                                    </li>
-                                    <li class="pl-1">
-                                        <a
-                                            href="#"
-                                            class="relative h-4 pl-1.5 text-[13px] leading-4 after:absolute after:left-0 after:top-0 after:h-0 after:w-[2px] after:bg-red-400 after:transition-all after:duration-150 hover:after:h-full focus:after:h-full active:after:h-full text-[#e8e8e8]"
+                                            id="simple-join"
+                                            href="javascript:;"
+                                            class="navi relative h-4 pl-1.5 text-[13px] leading-4 text-[#e8e8e8] after:absolute after:left-0 after:top-0 after:h-0 after:w-[2px] after:bg-red-400 after:transition-all after:duration-150 hover:after:h-full focus:after:h-full active:after:h-full"
                                         >
                                             간편로그인
                                         </a>
                                     </li>
                                     <li class="pl-1">
                                         <a
-                                            href="#"
-                                            class="relative h-4 pl-1.5 text-[13px] leading-4 after:absolute after:left-0 after:top-0 after:h-0 after:w-[2px] after:bg-red-400 after:transition-all after:duration-150 hover:after:h-full focus:after:h-full active:after:h-full text-[#e8e8e8]"
+                                            id="return"
+                                            href="javascript:;"
+                                            class="navi relative h-4 pl-1.5 text-[13px] leading-4 text-[#e8e8e8] after:absolute after:left-0 after:top-0 after:h-0 after:w-[2px] after:bg-red-400 after:transition-all after:duration-150 hover:after:h-full focus:after:h-full active:after:h-full"
                                         >
                                             번호인증/약관동의
                                         </a>
                                     </li>
                                     <li class="pl-1">
                                         <a
-                                            href="#"
-                                            class="relative h-4 pl-1.5 text-[13px] leading-4 after:absolute after:left-0 after:top-0 after:h-0 after:w-[2px] after:bg-red-400 after:transition-all after:duration-150 hover:after:h-full focus:after:h-full active:after:h-full text-[#e8e8e8]"
+                                            id="complete"
+                                            href="javascript:;"
+                                            class="relative h-4 pl-1.5 text-[13px] leading-4 text-[#e8e8e8] after:absolute after:left-0 after:top-0 after:h-0 after:w-[2px] after:bg-red-400 after:transition-all after:duration-150 hover:after:h-full focus:after:h-full active:after:h-full"
                                         >
                                             가입완료
                                         </a>
                                     </li>
                                 </ul>
                             </li>
-                            <li class="contents-center min-h-[40px]">
-                                <a href="#" class="flex h-[40px] items-center gap-1 font-bold text-[#e8e8e8]">
-                                    &middot; 메인페이지
-                                </a>
-                                <ul class="px-1 pb-[10px]">
+                            <li class="menu-depth1 contents-center min-h-[40px]">
+                                <a id="main" href="javascript:;" class="flex h-[40px] items-center gap-1 font-bold text-[#e8e8e8]"> &middot; 메인페이지 </a>
+                                <ul class="buttonGroups px-1 pb-[10px]">
                                     <li class="pl-1">
                                         <a
-                                            href="#"
-                                            class="relative h-4 pl-1.5 text-[13px] leading-4 after:absolute after:left-0 after:top-0 after:h-0 after:w-[2px] after:bg-red-400 after:transition-all after:duration-150 hover:after:h-full focus:after:h-full active:after:h-full text-[#e8e8e8]"
-                                        >
-                                            메인화면
-                                        </a>
-                                    </li>
-                                    <li class="pl-1">
-                                        <a
-                                            href="#"
-                                            class="relative h-4 pl-1.5 text-[13px] leading-4 after:absolute after:left-0 after:top-0 after:h-0 after:w-[2px] after:bg-red-400 after:transition-all after:duration-150 hover:after:h-full focus:after:h-full active:after:h-full text-[#e8e8e8]"
-                                        >
-                                            메뉴트리
-                                        </a>
-                                    </li>
-                                    <li class="pl-1">
-                                        <a
-                                            href="#"
-                                            class="relative h-4 pl-1.5 text-[13px] leading-4 after:absolute after:left-0 after:top-0 after:h-0 after:w-[2px] after:bg-red-400 after:transition-all after:duration-150 hover:after:h-full focus:after:h-full active:after:h-full text-[#e8e8e8]"
+                                            id="create"
+                                            href="javascript:;"
+                                            class="relative h-4 pl-1.5 text-[13px] leading-4 text-[#e8e8e8] after:absolute after:left-0 after:top-0 after:h-0 after:w-[2px] after:bg-gray-400 after:transition-all after:duration-150 hover:after:h-full focus:after:h-full active:after:h-full"
                                         >
                                             약속만들기
                                         </a>
                                     </li>
                                     <li class="pl-1">
                                         <a
-                                            href="#"
-                                            class="relative h-4 pl-1.5 text-[13px] leading-4 after:absolute after:left-0 after:top-0 after:h-0 after:w-[2px] after:bg-red-400 after:transition-all after:duration-150 hover:after:h-full focus:after:h-full active:after:h-full text-[#e8e8e8]"
-                                        >
-                                            유형선택
-                                        </a>
-                                    </li>
-                                    <li class="pl-1">
-                                        <a
-                                            href="#"
-                                            class="relative h-4 pl-1.5 text-[13px] leading-4 after:absolute after:left-0 after:top-0 after:h-0 after:w-[2px] after:bg-red-400 after:transition-all after:duration-150 hover:after:h-full focus:after:h-full active:after:h-full text-[#e8e8e8]"
-                                        >
-                                            일시선택
-                                        </a>
-                                    </li>
-                                    <li class="pl-1">
-                                        <a
-                                            href="#"
-                                            class="relative h-4 pl-1.5 text-[13px] leading-4 after:absolute after:left-0 after:top-0 after:h-0 after:w-[2px] after:bg-red-400 after:transition-all after:duration-150 hover:after:h-full focus:after:h-full active:after:h-full text-[#e8e8e8]"
+                                            id="amount"
+                                            href="javascript:;"
+                                            class="relative h-4 pl-1.5 text-[13px] leading-4 text-[#e8e8e8] after:absolute after:left-0 after:top-0 after:h-0 after:w-[2px] after:bg-gray-400 after:transition-all after:duration-150 hover:after:h-full focus:after:h-full active:after:h-full"
                                         >
                                             인원 및 금액설정
                                         </a>
                                     </li>
                                     <li class="pl-1">
                                         <a
-                                            href="#"
-                                            class="relative h-4 pl-1.5 text-[13px] leading-4 after:absolute after:left-0 after:top-0 after:h-0 after:w-[2px] after:bg-red-400 after:transition-all after:duration-150 hover:after:h-full focus:after:h-full active:after:h-full text-[#e8e8e8]"
+                                            id="m-return"
+                                            href="javascript:;"
+                                            class="relative h-4 pl-1.5 text-[13px] leading-4 text-[#e8e8e8] after:absolute after:left-0 after:top-0 after:h-0 after:w-[2px] after:bg-gray-400 after:transition-all after:duration-150 hover:after:h-full focus:after:h-full active:after:h-full"
                                         >
                                             반환조건 선택
                                         </a>
                                     </li>
                                     <li class="pl-1">
                                         <a
-                                            href="#"
-                                            class="relative h-4 pl-1.5 text-[13px] leading-4 after:absolute after:left-0 after:top-0 after:h-0 after:w-[2px] after:bg-red-400 after:transition-all after:duration-150 hover:after:h-full focus:after:h-full active:after:h-full text-[#e8e8e8]"
-                                        >
-                                            확인 후 결제
-                                        </a>
-                                    </li>
-                                    <li class="pl-1">
-                                        <a
-                                            href="#"
-                                            class="relative h-4 pl-1.5 text-[13px] leading-4 after:absolute after:left-0 after:top-0 after:h-0 after:w-[2px] after:bg-red-400 after:transition-all after:duration-150 hover:after:h-full focus:after:h-full active:after:h-full text-[#e8e8e8]"
+                                            id="m-url"
+                                            href="javascript:;"
+                                            class="relative h-4 pl-1.5 text-[13px] leading-4 text-[#e8e8e8] after:absolute after:left-0 after:top-0 after:h-0 after:w-[2px] after:bg-gray-400 after:transition-all after:duration-150 hover:after:h-full focus:after:h-full active:after:h-full"
                                         >
                                             결제 후 URL공유페이지
                                         </a>
                                     </li>
                                 </ul>
                             </li>
-                            <li class="contents-center min-h-[40px]">
-                                <a href="#" class="flex h-[40px] items-center gap-1 font-bold text-[#e8e8e8]">
-                                    &middot; 약속관리
-                                </a>
-                                <ul class="px-1 pb-[10px]">
+                            <li class="menu-depth1 contents-center min-h-[40px]">
+                                <a id="promise" href="javascript:;" class="flex h-[40px] items-center gap-1 font-bold text-[#e8e8e8]"> &middot; 약속관리 </a>
+                                <ul class="buttonGroups px-1 pb-[10px]">
                                     <li class="pl-1">
                                         <a
-                                            href="#"
-                                            class="relative h-4 pl-1.5 text-[13px] leading-4 after:absolute after:left-0 after:top-0 after:h-0 after:w-[2px] after:bg-blue-400 after:transition-all after:duration-150 hover:after:h-full focus:after:h-full active:after:h-full text-[#e8e8e8]"
-                                            >
+                                            id="detail"
+                                            href="javascript:;"
+                                            class="relative h-4 pl-1.5 text-[13px] leading-4 text-[#e8e8e8] after:absolute after:left-0 after:top-0 after:h-0 after:w-[2px] after:bg-blue-400 after:transition-all after:duration-150 hover:after:h-full focus:after:h-full active:after:h-full"
+                                        >
                                             상세페이지
                                         </a>
                                     </li>
                                     <li class="pl-1">
                                         <a
-                                            href="#"
-                                            class="relative h-4 pl-1.5 text-[13px] leading-4 after:absolute after:left-0 after:top-0 after:h-0 after:w-[2px] after:bg-blue-400 after:transition-all after:duration-150 hover:after:h-full focus:after:h-full active:after:h-full text-[#e8e8e8]"
-                                            >약속이행확인</a>
+                                            id="cancel"
+                                            href="javascript:;"
+                                            class="relative h-4 pl-1.5 text-[13px] leading-4 text-[#e8e8e8] after:absolute after:left-0 after:top-0 after:h-0 after:w-[2px] after:bg-blue-400 after:transition-all after:duration-150 hover:after:h-full focus:after:h-full active:after:h-full"
+                                            >약속취소</a
+                                        >
                                     </li>
                                     <li class="pl-1">
                                         <a
-                                            href="#"
-                                            class="relative h-4 pl-1.5 text-[13px] leading-4 after:absolute after:left-0 after:top-0 after:h-0 after:w-[2px] after:bg-blue-400 after:transition-all after:duration-150 hover:after:h-full focus:after:h-full active:after:h-full text-[#e8e8e8]"
-                                            >계좌확인</a>
+                                            id="p-return"
+                                            href="javascript:;"
+                                            class="relative h-4 pl-1.5 text-[13px] leading-4 text-[#e8e8e8] after:absolute after:left-0 after:top-0 after:h-0 after:w-[2px] after:bg-blue-400 after:transition-all after:duration-150 hover:after:h-full focus:after:h-full active:after:h-full"
+                                            >반환받기</a
+                                        >
                                     </li>
-                                    <li class="pl-1">
-                                        <a
-                                            href="#"
-                                            class="relative h-4 pl-1.5 text-[13px] leading-4 after:absolute after:left-0 after:top-0 after:h-0 after:w-[2px] after:bg-blue-400 after:transition-all after:duration-150 hover:after:h-full focus:after:h-full active:after:h-full text-[#e8e8e8]"
-                                            >반환받기</a>
-                                    </li>
+                                    
                                 </ul>
                             </li>
-                            <li class="contents-center min-h-[40px]">
-                                <a href="#" class="flex h-[40px] items-center gap-1 font-bold text-[#e8e8e8]">
-                                    &middot; 마이페이지
-                                </a>
-                                <ul class="px-1 pb-[10px]">
+                            <li class="menu-depth1 contents-center min-h-[40px]">
+                                <a id="mypage" href="javascript:;" class="flex h-[40px] items-center gap-1 font-bold text-[#e8e8e8]"> &middot; 마이페이지 </a>
+                                <ul class="buttonGroups px-1 pb-[10px]">
                                     <li class="pl-1">
                                         <a
-                                            href="#"
-                                            class="relative h-4 pl-1.5 text-[13px] leading-4 after:absolute after:left-0 after:top-0 after:h-0 after:w-[2px] after:bg-purple-400 after:transition-all after:duration-150 hover:after:h-full focus:after:h-full active:after:h-full text-[#e8e8e8]"
+                                            id="mypage"
+                                            href="javascript:;"
+                                            class="relative h-4 pl-1.5 text-[13px] leading-4 text-[#e8e8e8] after:absolute after:left-0 after:top-0 after:h-0 after:w-[2px] after:bg-purple-400 after:transition-all after:duration-150 hover:after:h-full focus:after:h-full active:after:h-full"
                                             >마이페이지</a
                                         >
                                     </li>
                                     <li class="pl-1">
                                         <a
-                                            href="#"
-                                            class="relative h-4 pl-1.5 text-[13px] leading-4 after:absolute after:left-0 after:top-0 after:h-0 after:w-[2px] after:bg-purple-400 after:transition-all after:duration-150 hover:after:h-full focus:after:h-full active:after:h-full text-[#e8e8e8]"
-                                            >내계정-탈퇴</a
-                                        >
-                                    </li>
-                                    <li class="pl-1">
-                                        <a
-                                            href="#"
-                                            class="relative h-4 pl-1.5 text-[13px] leading-4 after:absolute after:left-0 after:top-0 after:h-0 after:w-[2px] after:bg-purple-400 after:transition-all after:duration-150 hover:after:h-full focus:after:h-full active:after:h-full text-[#e8e8e8]"
+                                            id="my-setting"
+                                            href="javascript:;"
+                                            class="relative h-4 pl-1.5 text-[13px] leading-4 text-[#e8e8e8] after:absolute after:left-0 after:top-0 after:h-0 after:w-[2px] after:bg-purple-400 after:transition-all after:duration-150 hover:after:h-full focus:after:h-full active:after:h-full"
                                             >계정확인</a
                                         >
                                     </li>
                                     <li class="pl-1">
                                         <a
-                                            href="#"
-                                            class="relative h-4 pl-1.5 text-[13px] leading-4 after:absolute after:left-0 after:top-0 after:h-0 after:w-[2px] after:bg-purple-400 after:transition-all after:duration-150 hover:after:h-full focus:after:h-full active:after:h-full text-[#e8e8e8]"
-                                            >계좌정보</a
-                                        >
-                                    </li>
-                                    <li class="pl-1">
-                                        <a
-                                            href="#"
-                                            class="relative h-4 pl-1.5 text-[13px] leading-4 after:absolute after:left-0 after:top-0 after:h-0 after:w-[2px] after:bg-purple-400 after:transition-all after:duration-150 hover:after:h-full focus:after:h-full active:after:h-full text-[#e8e8e8]"
+                                            id="my_connect"
+                                            href="javascript:;"
+                                            class="relative h-4 pl-1.5 text-[13px] leading-4 text-[#e8e8e8] after:absolute after:left-0 after:top-0 after:h-0 after:w-[2px] after:bg-purple-400 after:transition-all after:duration-150 hover:after:h-full focus:after:h-full active:after:h-full"
                                             >계좌연결하기</a
                                         >
                                     </li>
                                 </ul>
                             </li>
-                            <li class="contents-center min-h-[40px]">
-                                <a href="#" class="flex h-[40px] items-center gap-1 font-bold text-[#e8e8e8]">
-                                    &middot; 공지사항
-                                </a>
-                                <ul class="px-1 pb-[10px]">
-                                    <li class="pl-1">
-                                        <a
-                                            href="#"
-                                            class="relative h-4 pl-1.5 text-[13px] leading-4 after:absolute after:left-0 after:top-0 after:h-0 after:w-[2px] after:bg-yellow-400 after:transition-all after:duration-150 hover:after:h-full focus:after:h-full active:after:h-full text-[#e8e8e8]"
-                                            >공지사항</a
-                                        >
-                                    </li>
-                                    <li class="pl-1">
-                                        <a
-                                            href="#"
-                                            class="relative h-4 pl-1.5 text-[13px] leading-4 after:absolute after:left-0 after:top-0 after:h-0 after:w-[2px] after:bg-yellow-400 after:transition-all after:duration-150 hover:after:h-full focus:after:h-full active:after:h-full text-[#e8e8e8]"
-                                            >1:1 문의</a
-                                        >
-                                    </li>
-                                    <li class="pl-1">
-                                        <a
-                                            href="#"
-                                            class="relative h-4 pl-1.5 text-[13px] leading-4 after:absolute after:left-0 after:top-0 after:h-0 after:w-[2px] after:bg-yellow-400 after:transition-all after:duration-150 hover:after:h-full focus:after:h-full active:after:h-full text-[#e8e8e8]"
-                                            >나의 문의내역</a
-                                        >
-                                    </li>
-                                </ul>
+                            <li class="menu-depth1 contents-center min-h-[40px]">
+                                <a id="customer" href="javascript:;" class="flex h-[40px] items-center gap-1 font-bold text-[#e8e8e8]"> &middot; 고객센터 </a>
                             </li>
                         </ul>
                     </menu>
@@ -258,95 +177,247 @@
             </header>
             <!-- //header -->
 
-            <section id="container" class="box-border h-full w-full overflow-y-auto p-10 bg-[#282941] relative pl-[280px]">
-                <div id="" class="flex items-center w-full">
-                    <h2 class="text-[22px] font-bold text-[#e8e8e8] pl-1">로그인/회원가입</h2>
+            <section id="container" class="relative box-border h-full w-full overflow-y-auto bg-[#282941] p-10 pl-[280px]">
+                <div class="grid-w h-auto w-full">
+                    <div class="grid-sizer"></div>
+                    <div class="grid-item member complete inline-block h-auto bg-gray-400 p-2.5"><img src="../dist/img/member/01.png" alt="가입완료" width="100%" /></div>
+                    <div class="grid-item member simple-join inline-block h-auto bg-gray-400 p-2.5"><img src="../dist/img/member/s_join/01.png" alt="간편가입" width="100%" /></div>
+                    <div class="grid-item member simple-join inline-block h-auto bg-gray-400 p-2.5"><img src="../dist/img/member/s_join/02.png" alt="간편가입" width="100%" /></div>
+                    <div class="grid-item member return inline-block h-auto bg-gray-400 p-2.5"><img src="../dist/img/member/s_join/03.png" alt="간편가입" width="100%" /></div>
+                    <div class="grid-item member return inline-block h-auto bg-gray-400 p-2.5"><img src="../dist/img/member/s_join/04.png" alt="간편가입" width="100%" /></div>
+                    <div class="grid-item member join inline-block h-auto bg-gray-400 p-2.5"><img src="../dist/img/member/join/01.png" alt="가입" width="100%" /></div>
+                    <div class="grid-item member join inline-block h-auto bg-gray-400 p-2.5"><img src="../dist/img/member/join/02.png" alt="가입" width="100%" /></div>
+                    <div class="grid-item member join inline-block h-auto bg-gray-400 p-2.5"><img src="../dist/img/member/join/03.png" alt="가입" width="100%" /></div>
+                    <div class="grid-item main create inline-block h-auto bg-gray-400 p-2.5"><img src="../dist/img/main/create/01.png" alt="약속생성" width="100%" /></div>
+                    <div class="grid-item main create inline-block h-auto bg-gray-400 p-2.5"><img src="../dist/img/main/create/02.png" alt="약속생성" width="100%" /></div>
+                    <div class="grid-item main create inline-block h-auto bg-gray-400 p-2.5"><img src="../dist/img/main/create/03.png" alt="약속생성" width="100%" /></div>
+                    <div class="grid-item main create amout inline-block h-auto bg-gray-400 p-2.5"><img src="../dist/img/main/create/amount/01.png" alt="약속생성 인원금액" width="100%" /></div>
+                    <div class="grid-item main create amout inline-block h-auto bg-gray-400 p-2.5"><img src="../dist/img/main/create/amount/02.png" alt="약속생성 인원금액" width="100%" /></div>
+                    <div class="grid-item main create amout inline-block h-auto bg-gray-400 p-2.5"><img src="../dist/img/main/create/amount/03.png" alt="약속생성 인원금액" width="100%" /></div>
+                    <div class="grid-item main create m-return inline-block h-auto bg-gray-400 p-2.5"><img src="../dist/img/main/create/amount/01.png" alt="약속생성 반환조건" width="100%" /></div>
+                    <div class="grid-item main create m-return inline-block h-auto bg-gray-400 p-2.5"><img src="../dist/img/main/create/amount/02.png" alt="약속생성 반환조건" width="100%" /></div>
+                    <div class="grid-item main create url inline-block h-auto bg-gray-400 p-2.5"><img src="../dist/img/main/create/url/01.png" alt="약속생성 url생성" width="100%" /></div>
+                    <div class="grid-item main create url inline-block h-auto bg-gray-400 p-2.5"><img src="../dist/img/main/create/url/02.png" alt="약속생성 url생성" width="100%" /></div>
+                    <div class="grid-item main create url inline-block h-auto bg-gray-400 p-2.5"><img src="../dist/img/main/create/url/03.png" alt="약속생성 url생성" width="100%" /></div>
+                    <div class="grid-item promise detail manage inline-block h-auto bg-gray-400 p-2.5"><img src="../dist/img/promise/detail/manage/01.png" alt="약속관리" width="100%" /></div>
+                    <div class="grid-item promise detail manage inline-block h-auto bg-gray-400 p-2.5"><img src="../dist/img/promise/detail/manage/02.png" alt="약속관리" width="100%" /></div>
+                    <div class="grid-item promise detail manage inline-block h-auto bg-gray-400 p-2.5"><img src="../dist/img/promise/detail/manage/03.png" alt="약속관리" width="100%" /></div>
+                    <div class="grid-item promise detail inline-block h-auto bg-gray-400 p-2.5"><img src="../dist/img/promise/detail/01.png" alt="약속상세 10인이하모임" width="100%" /></div>
+                    <div class="grid-item promise detail inline-block h-auto bg-gray-400 p-2.5"><img src="../dist/img/promise/detail/02.png" alt="약속상세 10인이하모임" width="100%" /></div>
+                    <div class="grid-item promise p-return inline-block h-auto bg-gray-400 p-2.5"><img src="../dist/img/promise/return/01.png" alt="약속상세 반환 호스트" width="100%" /></div>
+                    <div class="grid-item promise p-return inline-block h-auto bg-gray-400 p-2.5"><img src="../dist/img/promise/return/02.png" alt="약속상세 반환" width="100%" /></div>
+                    <div class="grid-item promise p-return inline-block h-auto bg-gray-400 p-2.5"><img src="../dist/img/promise/return/03.png" alt="약속상세 반환" width="100%" /></div>
+                    <div class="grid-item promise cancel inline-block h-auto bg-gray-400 p-2.5"><img src="../dist/img/promise/cancel/01.png" alt="약속취소" width="100%" /></div>
+                    <div class="grid-item promise cancel inline-block h-auto bg-gray-400 p-2.5"><img src="../dist/img/promise/cancel/02.png" alt="약속취소" width="100%" /></div>
+                    <div class="grid-item promise cancel inline-block h-auto bg-gray-400 p-2.5"><img src="../dist/img/promise/cancel/03.png" alt="약속취소" width="100%" /></div>
+                    <div class="grid-item mypage inline-block h-auto bg-gray-400 p-2.5"><img src="../dist/img/mypage/01.png" alt="마이페이지" width="100%" /></div>
+                    <div class="grid-item mypage inline-block h-auto bg-gray-400 p-2.5"><img src="../dist/img/mypage/02.png" alt="마이페이지" width="100%" /></div>
+                    <div class="grid-item mypage bank connect inline-block h-auto bg-gray-400 p-2.5"><img src="../dist/img/mypage/bank/connect/01.png" alt="마이페이지 계좌연결" width="100%" /></div>
+                    <div class="grid-item mypage bank connect inline-block h-auto bg-gray-400 p-2.5"><img src="../dist/img/mypage/bank/connect/02.png" alt="마이페이지 계좌연결" width="100%" /></div>
+                    <div class="grid-item mypage bank setting inline-block h-auto bg-gray-400 p-2.5"><img src="../dist/img/mypage/bank/setting/01.png" alt="마이페이지 계좌설정" width="100%" /></div>
+                    <div class="grid-item mypage bank setting inline-block h-auto bg-gray-400 p-2.5"><img src="../dist/img/mypage/bank/setting/02.png" alt="마이페이지 계좌설정" width="100%" /></div>
+                    <div class="grid-item customer inline-block h-auto bg-gray-400 p-2.5"><img src="../dist/img/customer/01.png" alt="고객센터" width="100%" /></div>
+                    <div class="grid-item customer inline-block h-auto bg-gray-400 p-2.5"><img src="../dist/img/customer/02.png" alt="고객센터" width="100%" /></div>
+                    <div class="grid-item customer inline-block h-auto bg-gray-400 p-2.5"><img src="../dist/img/customer/03.png" alt="고객센터" width="100%" /></div>
+                    <div class="grid-item customer inline-block h-auto bg-gray-400 p-2.5"><img src="../dist/img/customer/04.png" alt="고객센터" width="100%" /></div>
                 </div>
+                <!-- // -->
 
-                <div class="mt-3 w-full flex justify-start flex-wrap gap-5 transition-all duration-100">
-                    <div class="h-auto inline-block border-[1px] border-[#f8f8f8] px-5 py-4 duration-500 bg-gray-200 shadow-md shadow-gray-800">
-                        <a href="../dist/img/login/01.png" target="_blank"><img src="../dist/img/login/01.png" alt="" class="w-full max-w-[375px]"></a>
-                    </div>
-                    <!-- // -->
-                    <div class="h-auto inline-block border-[1px] border-[#f8f8f8] px-5 py-4 duration-500 bg-gray-200 shadow-md shadow-gray-800">
-                        <a href="../dist/img/login/02.png" target="_blank"><img src="../dist/img/login/02.png" alt="" class="w-full max-w-[375px]"></a>
-                    </div>
-                    <!-- // -->
+                <script>
+                    var grid = document.querySelector('.grid-w');
+                    var msnry;
+                    // element selectors
+                    let gridMember = document.querySelectorAll('.member');
+                    let gridMemberReturn = document.querySelectorAll('.return');
+                    let gridMemberSjoin = document.querySelectorAll('.simple-join');
+                    let gridMemberComplete = document.querySelectorAll('.complete');
+                    let gridMemberJoin = document.querySelectorAll('.join');
+                    let gridMain = document.querySelectorAll('.main');
+                    let gridMainCreate = document.querySelectorAll('.create');
+                    let gridMainAmount = document.querySelectorAll('.amount');
+                    let gridMainReturn = document.querySelectorAll('.m-return');
+                    let gridPromise = document.querySelectorAll('.promise');
+                    let gridPromiseDetail = document.querySelectorAll('.detail');
+                    let gridPromiseReturn = document.querySelectorAll('.p-return');
+                    let gridPromiseCancel = document.querySelectorAll('.cancel');
+                    let gridMypage = document.querySelectorAll('.mypage');
+                    let gridMypageSetting = document.querySelectorAll('.setting');
+                    let gridMypageConnect = document.querySelectorAll('.connect');
+                    let gridCustomer = document.querySelectorAll('.customer');
 
-                    <div class="h-auto inline-block border-[1px] border-[#f8f8f8] px-5 py-4 duration-500 bg-gray-200 shadow-md shadow-gray-800">
-                        <a href="../dist/img/login/07.png" target="_blank"><img src="../dist/img/login/07.png" alt="" class="w-full max-w-[375px]"></a>
-                    </div>
-                    <!-- // -->
-                    <div class="h-auto inline-block border-[1px] border-[#f8f8f8] px-5 py-4 duration-500 bg-gray-200 shadow-md shadow-gray-800">
-                        <a href="../dist/img/login/08.png" target="_blank"><img src="../dist/img/login/08.png" alt="" class="w-full max-w-[375px]"></a>
-                    </div>
-                    <!-- // -->
-                    <div class="h-auto inline-block border-[1px] border-[#f8f8f8] px-5 py-4 duration-500 bg-gray-200 shadow-md shadow-gray-800">
-                        <a href="../dist/img/login/03.png" target="_blank"><img src="../dist/img/login/03.png" alt="" class="w-full max-w-[375px]"></a>
-                    </div>
-                    <!-- // -->
-                    <div class="h-auto inline-block border-[1px] border-[#f8f8f8] px-5 py-4 duration-500 bg-gray-200 shadow-md shadow-gray-800">
-                        <a href="../dist/img/login/04.png" target="_blank"><img src="../dist/img/login/04.png" alt="" class="w-full max-w-[375px]"></a>
-                    </div>
-                    <!-- // -->
-                    <div class="h-auto inline-block border-[1px] border-[#f8f8f8] px-5 py-4 duration-500 bg-gray-200 shadow-md shadow-gray-800">
-                        <a href="../dist/img/login/05.png" target="_blank"><img src="../dist/img/login/05.png" alt="" class="w-full max-w-[375px]"></a>
-                    </div>
-                    <!-- // -->
-                    <div class="h-auto inline-block border-[1px] border-[#f8f8f8] px-5 py-4 duration-500 bg-gray-200 shadow-md shadow-gray-800">
-                        <a href="../dist/img/login/06.png" target="_blank"><img src="../dist/img/login/06.png" alt="" class="w-full max-w-[375px]"></a>
-                    </div>
-                    <!-- // -->
+                    // buttons
+                    const tabsUl = document.getElementById('buttonGroup');
+                    const tabsUls = document.querySelector('.buttonGroups');
+                    const lis = tabsUl.children;
+                    const liss = tabsUls.children;
+                    const gridItems = grid.children;
 
-                    <div id="" class="flex items-center w-full pt-10">
-                        <h2 class="text-[22px] font-bold text-[#e8e8e8] pl-1">메인페이지</h2>
-                    </div>
-    
-                    <div class="mt-3 w-full inline-flex justify-start flex-wrap gap-5 transition-all duration-100">
-                        <div class="h-auto inline-block border-[1px] border-[#f8f8f8] px-5 py-4 duration-500 bg-gray-200 shadow-md shadow-gray-800">
-                            <a href="../dist/img/main/01.png" target="_blank"><img src="../dist/img/main/01.png" alt="" class="w-full max-w-[375px]"></a>
-                        </div>
-                        <!-- // -->
-                        <div class="h-auto inline-block border-[1px] border-[#f8f8f8] px-5 py-4 duration-500 bg-gray-200 shadow-md shadow-gray-800">
-                            <a href="../dist/img/main/02.png" target="_blank"><img src="../dist/img/main/02.png" alt="" class="w-full max-w-[375px]"></a>
-                        </div>
-                        <!-- // -->
-                        <div class="h-auto inline-block border-[1px] border-[#f8f8f8] px-5 py-4 duration-500 bg-gray-200 shadow-md shadow-gray-800">
-                            <a href="../dist/img/main/03.png" target="_blank"><img src="../dist/img/main/03.png" alt="" class="w-full max-w-[375px]"></a>
-                        </div>
-                        <!-- // -->
-                    </div>
-                    <!-- // -->
+                    imagesLoaded(grid, function () {
+                        msnry = new Masonry(grid, {
+                            //options
+                            itemSelector: '.grid-item',
+                            columnWidth: '.grid-sizer',
+                            percentPosition: true,
+                        });
+                    });
 
-                    <div id="" class="flex items-center w-full pt-10">
-                        <h2 class="text-[22px] font-bold text-[#e8e8e8] pl-1">마이페이지</h2>
-                    </div>
-    
-                    <div class="mt-3 w-full inline-flex justify-start flex-wrap gap-5 transition-all duration-100">
-                        <div class="h-auto inline-block border-[1px] border-[#f8f8f8] px-5 py-4 duration-500 bg-gray-200 shadow-md shadow-gray-800">
-                            <a href="../dist/img/mypage/01/01.png" target="_blank"><img src="../dist/img/mypage/01/01.png" alt="" class="w-full max-w-[375px]"></a>
-                        </div>
-                        <!-- // -->
-                        <div class="h-auto inline-block border-[1px] border-[#f8f8f8] px-5 py-4 duration-500 bg-gray-200 shadow-md shadow-gray-800">
-                            <a href="../dist/img/mypage/01/02.png" target="_blank"><img src="../dist/img/mypage/01/02.png" alt="" class="w-full max-w-[375px]"></a>
-                        </div>
-                        <!-- // -->
-                        <div class="h-auto inline-block border-[1px] border-[#f8f8f8] px-5 py-4 duration-500 bg-gray-200 shadow-md shadow-gray-800">
-                            <a href="../dist/img/mypage/02/01.png" target="_blank"><img src="../dist/img/mypage/02/01.png" alt="" class="w-full max-w-[375px]"></a>
-                        </div>
-                        <!-- // -->
-                        <div class="h-auto inline-block border-[1px] border-[#f8f8f8] px-5 py-4 duration-500 bg-gray-200 shadow-md shadow-gray-800">
-                            <a href="../dist/img/mypage/02/02.png" target="_blank"><img src="../dist/img/mypage/02/02.png" alt="" class="w-full max-w-[375px]"></a>
-                        </div>
-                        <!-- // -->
-                        <div class="h-auto inline-block border-[1px] border-[#f8f8f8] px-5 py-4 duration-500 bg-gray-200 shadow-md shadow-gray-800">
-                            <a href="../dist/img/mypage/02/03.png" target="_blank"><img src="../dist/img/mypage/02/03.png" alt="" class="w-full max-w-[375px]"></a>
-                        </div>
-                        <!-- // -->
-                    </div>
-                    <!-- // -->
+                    //element & class name
+                    function toggleClass(parentElem, childElems, className) {
+                        for (let i = 0; i < childElems.length; i++) {
+                            if (childElems[i] == parentElem) {
+                                childElems[i].classList.add(className);
+                            } else {
+                                childElems[i].classList.remove(className);
+                            }
+                        }
+                    }
 
-                </div>
+                    function showImages1(showImg, hideImg1, hideImg2, hideImg3, hideImg4) {
+                        for (let i = 0; i < showImg.length; i++) {
+                            showImg[i].style.display = 'block';
+                        }
+                        for (let i = 0; i < hideImg1.length; i++) {
+                            hideImg1[i].style.display = 'none';
+                        }
+                        for (let i = 0; i < hideImg2.length; i++) {
+                            hideImg2[i].style.display = 'none';
+                        }
+                        for (let i = 0; i < hideImg3.length; i++) {
+                            hideImg3[i].style.display = 'none';
+                        }
+                        for (let i = 0; i < hideImg4.length; i++) {
+                            hideImg4[i].style.display = 'none';
+                        }
+                    }
+
+                    function showImages2(showImg, hideImg1, hideImg2, hideImg3){
+                        for (let i = 0; i < showImg.length; i++) {
+                            showImg[i].style.display = 'block';
+                        }
+                        for (let i = 0; i < hideImg1.length; i++) {
+                            hideImg1[i].style.display = 'none';
+                        }
+                        for (let i = 0; i < hideImg2.length; i++) {
+                            hideImg2[i].style.display = 'none';
+                        }
+                        for (let i = 0; i < hideImg3.length; i++) {
+                            hideImg3[i].style.display = 'none';
+                        }
+                    }
+
+                    function showImages3(showImg, hideImg1, hideImg2, hideImg3){
+                        for (let i = 0; i < showImg.length; i++) {
+                            showImg[i].style.display = 'block';
+                        }
+                        for (let i = 0; i < hideImg1.length; i++) {
+                            hideImg1[i].style.display = 'none';
+                        }
+                        for (let i = 0; i < hideImg2.length; i++) {
+                            hideImg2[i].style.display = 'none';
+                        }
+                        for (let i = 0; i < hideImg3.length; i++) {
+                            hideImg2[i].style.display = 'none';
+                        }
+                    }
+
+                    function showImages4(showImg, hideImg1, hideImg2){
+                        for (let i = 0; i < showImg.length; i++) {
+                            showImg[i].style.display = 'block';
+                        }
+                        for (let i = 0; i < hideImg1.length; i++) {
+                            hideImg1[i].style.display = 'none';
+                        }
+                        for (let i = 0; i < hideImg2.length; i++) {
+                            hideImg2[i].style.display = 'none';
+                        }
+                    }
+                    function showImages5(hideImg1, hideImg2, hideImg3, hideImg4){
+                        for (let i = 0; i < hideImg1.length; i++) {
+                            hideImg1[i].style.display = 'none';
+                        }
+                        for (let i = 0; i < hideImg2.length; i++) {
+                            hideImg2[i].style.display = 'none';
+                        }
+                        for (let i = 0; i < hideImg3.length; i++) {
+                            hideImg3[i].style.display = 'none';
+                        }
+                        for (let i = 0; i < hideImg4.length; i++) {
+                            hideImg4[i].style.display = 'none';
+                        }
+                    }
+                    
+
+                    tabsUl.addEventListener('click', event => {
+                        let tabLi = event.target.parentNode;
+
+                        toggleClass(tabLi, lis, 'is-active');
+
+                        //show ny images
+                        if (event.target.id == 'member') {
+                            showImages1(gridMember, gridMain, gridMypage, gridCustomer, gridPromise);
+                        }
+                        
+                        //show ny images
+                        if (event.target.id == 'main') {
+                            showImages1(gridMain, gridMypage, gridCustomer, gridPromise, gridMember);
+                        }
+
+                        //show ny images
+                        if (event.target.id == 'mypage') {
+                            showImages1(gridMypage, gridCustomer, gridPromise, gridMember, gridMain);
+                        }
+
+                        //show ny images
+                        if (event.target.id == 'customer') {
+                            showImages1(gridCustomer, gridPromise, gridMember, gridMain, gridMypage);
+                        }
+
+                        //show ny images
+                        if (event.target.id == 'promise') {
+                            showImages1(gridPromise, gridMember, gridMain, gridMypage, gridCustomer);
+                        }
+
+                        msnry.layout();
+                    });
+
+                    tabsUls.addEventListener('click', event => {
+                        let tabLi = event.target.parentNode;
+
+                        toggleClass(tabLi, liss, 'is-active');
+
+                        //show ny images
+                        if (event.target.id == 'simple-join') {
+                            showImages2(gridMemberSjoin, gridMemberComplete, gridMemberReturn, gridMemberJoin);
+                            showImages5(gridMain, gridPromise, gridMypage, gridCustomer);
+                        }
+
+                        //show ny images
+                        if (event.target.id == 'return') {
+                            showImages2(gridMemberReturn, gridMemberSjoin, gridMemberComplete, gridMemberJoin);
+                            showImages5(gridMain, gridPromise, gridMypage, gridCustomer);
+                        }
+
+                        //show ny images
+                        if (event.target.id == 'complete') {
+                            showImages2(gridMemberComplete, gridMemberReturn, gridMemberSjoin, gridMemberJoin);
+                            showImages5(gridMain, gridPromise, gridMypage, gridCustomer);
+                        }
+
+                        //show ny images
+                        if (event.target.id == 'create') {
+                            showImages3(gridMainCreate, gridMainAmount, gridMainReturn);
+                            showImages5(gridMember, gridPromise, gridMypage, gridCustomer);
+                        }
+                        
+                        msnry.layout();
+                    });
+
+                    grid.addEventListener('click', function (event) {
+                        let imgContainer = event.target.parentNode;
+                        toggleClass(imgContainer, gridItems, 'grid-item__expanded');
+                        msnry.layout();
+                    });
+                </script>
             </section>
             <!-- //container -->
         </div>
