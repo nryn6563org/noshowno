@@ -12,9 +12,4 @@
     .is-active::after{
       height:100%;
     }
-
-    .grid-item, .grid-sizer{
-      width:240px;
-      margin:0 5px 5px;
-    }
 }
