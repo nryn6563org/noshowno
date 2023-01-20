@@ -12,4 +12,27 @@
     .is-active::after{
       height:100%;
     }
+
+    .modal{
+      display:none;
+    }
+    .modal.is-open{
+      display:block;
+    }
+
+    .modal__container{
+      width:475px;
+      padding:0 50px;
+    }
+    
+    .swiper{
+    }
+    .swiper::-webkit-scrollbar{
+    }
+    .swiper-wrapper{
+      align-items: center;
+    }
+
+    .swiper-wrapper .siwper-slide{
+    } 
 }
