@@ -13,7 +13,7 @@
     </head>
     <body class="h-full">
         <div id="nsn" class="h-full w-full">
-            <header id="header" class="fixed inset-0 z-20 h-full w-[250px] border-r-[1px] border-gray-800 bg-[#191A32] shadow-gray-800">
+            <header id="header" class="fixed inset-0 z-20 h-full w-[250px] border-r-[1px] border-gray-800 bg-[#191A32] shadow-gray-800 sm:left-[-250px] sm:transition-all sm:duration-[250]">
                 <div class="flex w-full justify-center gap-2.5 border-b-[1px] border-[#d7d7d7] px-5 py-10 dark:border-[#787878]">
                     <h1 class="h-8 text-[24px] font-bold text-[#121212] text-[#e8e8e8]"><img src="../dist/img/logo.jpg" alt="노쇼노" /></h1>
                 </div>
@@ -24,7 +24,7 @@
                     <menu class="block w-full">
                         <ul id="buttonGroup" class="w-full">
                             <li>
-                                <button id="allpage" class="relative flex h-[40px] w-full items-center gap-1 overflow-hidden rounded-[8px] border-[1px] border-[#f6f6f6] bg-white px-[10px] pl-[45px] text-[16px] font-extrabold leading-[40px] text-[#242424] shadow-gray-700 after:absolute after:right-0 after:z-0 after:h-full after:w-0 after:bg-gray-200 after:transition-all after:duration-300 hover:after:w-full focus:bg-gray-200">
+                                <button id="allpage" class="sm-close relative flex h-[40px] w-full items-center gap-1 overflow-hidden rounded-[8px] border-[1px] border-[#f6f6f6] bg-white px-[10px] pl-[45px] text-[16px] font-extrabold leading-[40px] text-[#242424] shadow-gray-700 after:absolute after:right-0 after:z-0 after:h-full after:w-0 after:bg-gray-200 after:transition-all after:duration-300 hover:after:w-full focus:bg-gray-200">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="z-10 h-[20px] w-[20px]">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
                                     </svg>
@@ -33,8 +33,8 @@
                                 <!-- //전체 -->
                             </li>
                             <li class="menu-depth1 contents-center mt-5 min-h-[40px]">
-                                <a id="member" href="javascript:;" class="flex h-[40px] items-center gap-1 font-bold text-[#e8e8e8]">&middot; 로그인/회원가입</a>
-                                <ul class="buttonGroups px-1 pb-[10px]">
+                                <a id="member" href="javascript:;" class="sm-close flex h-[40px] items-center gap-1 font-bold text-[#e8e8e8]">&middot; 로그인/회원가입</a>
+                                <ul class="buttonGroups px-1 pb-[10px] sm:hidden">
                                     <li class="pl-1">
                                         <a id="simple-join" href="javascript:;" class="navi relative h-4 pl-1.5 text-[13px] leading-4 text-[#e8e8e8] after:absolute after:left-0 after:top-0 after:h-0 after:w-[2px] after:bg-red-400 after:transition-all after:duration-150 hover:after:h-full focus:after:h-full active:after:h-full"> 간편로그인 </a>
                                     </li>
@@ -47,8 +47,8 @@
                                 </ul>
                             </li>
                             <li class="menu-depth1 contents-center min-h-[40px]">
-                                <a id="main" href="javascript:;" class="flex h-[40px] items-center gap-1 font-bold text-[#e8e8e8]"> &middot; 메인페이지 </a>
-                                <ul class="buttonGroups px-1 pb-[10px]">
+                                <a id="main" href="javascript:;" class="sm-close flex h-[40px] items-center gap-1 font-bold text-[#e8e8e8]"> &middot; 메인페이지 </a>
+                                <ul class="buttonGroups px-1 pb-[10px] sm:hidden">
                                     <li class="pl-1">
                                         <a id="create" href="javascript:;" class="relative h-4 pl-1.5 text-[13px] leading-4 text-[#e8e8e8] after:absolute after:left-0 after:top-0 after:h-0 after:w-[2px] after:bg-gray-400 after:transition-all after:duration-150 hover:after:h-full focus:after:h-full active:after:h-full"> 약속만들기 </a>
                                     </li>
@@ -64,8 +64,8 @@
                                 </ul>
                             </li>
                             <li class="menu-depth1 contents-center min-h-[40px]">
-                                <a id="promise" href="javascript:;" class="flex h-[40px] items-center gap-1 font-bold text-[#e8e8e8]"> &middot; 약속관리 </a>
-                                <ul class="buttonGroups px-1 pb-[10px]">
+                                <a id="promise" href="javascript:;" class="sm-close flex h-[40px] items-center gap-1 font-bold text-[#e8e8e8]"> &middot; 약속관리 </a>
+                                <ul class="buttonGroups px-1 pb-[10px] sm:hidden">
                                     <li class="pl-1">
                                         <a id="detail" href="javascript:;" class="relative h-4 pl-1.5 text-[13px] leading-4 text-[#e8e8e8] after:absolute after:left-0 after:top-0 after:h-0 after:w-[2px] after:bg-blue-400 after:transition-all after:duration-150 hover:after:h-full focus:after:h-full active:after:h-full"> 상세페이지 </a>
                                     </li>
@@ -78,8 +78,8 @@
                                 </ul>
                             </li>
                             <li class="menu-depth1 contents-center min-h-[40px]">
-                                <a id="mypage" href="javascript:;" class="flex h-[40px] items-center gap-1 font-bold text-[#e8e8e8]"> &middot; 마이페이지 </a>
-                                <ul class="buttonGroups px-1 pb-[10px]">
+                                <a id="mypage" href="javascript:;" class="sm-close flex h-[40px] items-center gap-1 font-bold text-[#e8e8e8]"> &middot; 마이페이지 </a>
+                                <ul class="buttonGroups px-1 pb-[10px] sm:hidden">
                                     <li class="pl-1">
                                         <a id="my-main" href="javascript:;" class="relative h-4 pl-1.5 text-[13px] leading-4 text-[#e8e8e8] after:absolute after:left-0 after:top-0 after:h-0 after:w-[2px] after:bg-purple-400 after:transition-all after:duration-150 hover:after:h-full focus:after:h-full active:after:h-full">마이페이지</a>
                                     </li>
@@ -98,147 +98,146 @@
                     </menu>
                 </aside>
                 <!-- //aside -->
-
             </header>
             <!-- //header -->
 
-            <section id="container" class="relative box-border h-full w-full overflow-y-auto bg-[#282941] p-10 pl-[280px] sm:p-0">
+            <section id="container" class="relative box-border h-full w-full overflow-y-auto bg-[#282941] p-10 pl-[280px] sm:p-0 sm:pt-10">
                 <div class="mobi-menu"></div>
                 <div class="grid-w h-auto w-full">
-                    <div class="grid-sizer m-2.5 sm:m-0 w-[240px] sm:w-1/3"></div>
-                    <div class="grid-item sm:w-1/3 member complete m-2.5 sm:m-0 h-auto w-[240px] bg-gray-400 p-2.5 sm:p-0">
+                    <div class="grid-sizer m-2.5 w-[240px] sm:m-0 sm:w-1/3"></div>
+                    <div class="grid-item member complete m-2.5 h-auto w-[240px] bg-gray-400 p-2.5 sm:m-0 sm:w-1/3 sm:p-0">
                         <a href="#" data-custom-open="modal0101"><img src="../dist/img/member/01.png" alt="가입완료" width="100%" /></a>
                     </div>
-                    <div class="grid-item sm:w-1/3 member simple-join m-2.5 sm:m-0 h-auto w-[240px] bg-gray-400 p-2.5 sm:p-0">
+                    <div class="grid-item member simple-join m-2.5 h-auto w-[240px] bg-gray-400 p-2.5 sm:m-0 sm:w-1/3 sm:p-0">
                         <a href="#slide010201" data-custom-open="modal0102"><img src="../dist/img/member/s_join/01.png" alt="간편가입" width="100%" /></a>
                     </div>
-                    <div class="grid-item sm:w-1/3 member simple-join m-2.5 sm:m-0 h-auto w-[240px] bg-gray-400 p-2.5 sm:p-0">
+                    <div class="grid-item member simple-join m-2.5 h-auto w-[240px] bg-gray-400 p-2.5 sm:m-0 sm:w-1/3 sm:p-0">
                         <a href="#slide010202" data-custom-open="modal0102"><img src="../dist/img/member/s_join/02.png" alt="간편가입" width="100%" /></a>
                     </div>
-                    <div class="grid-item sm:w-1/3 member return m-2.5 sm:m-0 h-auto w-[240px] bg-gray-400 p-2.5 sm:p-0">
+                    <div class="grid-item member return m-2.5 h-auto w-[240px] bg-gray-400 p-2.5 sm:m-0 sm:w-1/3 sm:p-0">
                         <a href="#slide010203" data-custom-open="modal0102"><img src="../dist/img/member/s_join/03.png" alt="간편가입" width="100%" /></a>
                     </div>
-                    <div class="grid-item sm:w-1/3 member return m-2.5 sm:m-0 h-auto w-[240px] bg-gray-400 p-2.5 sm:p-0">
+                    <div class="grid-item member return m-2.5 h-auto w-[240px] bg-gray-400 p-2.5 sm:m-0 sm:w-1/3 sm:p-0">
                         <a href="#slide010204" data-custom-open="modal0102"><img src="../dist/img/member/s_join/04.png" alt="간편가입" width="100%" /></a>
                     </div>
-                    <div class="grid-item sm:w-1/3 member join m-2.5 sm:m-0 h-auto w-[240px] bg-gray-400 p-2.5 sm:p-0">
+                    <div class="grid-item member join m-2.5 h-auto w-[240px] bg-gray-400 p-2.5 sm:m-0 sm:w-1/3 sm:p-0">
                         <a href="#slide010301" data-custom-open="modal0103"><img src="../dist/img/member/join/01.png" alt="가입" width="100%" /></a>
                     </div>
-                    <div class="grid-item sm:w-1/3 member join m-2.5 sm:m-0 h-auto w-[240px] bg-gray-400 p-2.5 sm:p-0">
+                    <div class="grid-item member join m-2.5 h-auto w-[240px] bg-gray-400 p-2.5 sm:m-0 sm:w-1/3 sm:p-0">
                         <a href="#slide010302" data-custom-open="modal0103"><img src="../dist/img/member/join/02.png" alt="가입" width="100%" /></a>
                     </div>
-                    <div class="grid-item sm:w-1/3 member join m-2.5 sm:m-0 h-auto w-[240px] bg-gray-400 p-2.5 sm:p-0">
+                    <div class="grid-item member join m-2.5 h-auto w-[240px] bg-gray-400 p-2.5 sm:m-0 sm:w-1/3 sm:p-0">
                         <a href="#slide010303" data-custom-open="modal0103"><img src="../dist/img/member/join/03.png" alt="가입" width="100%" /></a>
                     </div>
                     <!-- //member -->
 
-                    <div class="grid-item sm:w-1/3 main create m-2.5 sm:m-0 h-auto w-[240px] bg-gray-400 p-2.5 sm:p-0">
+                    <div class="grid-item main create m-2.5 h-auto w-[240px] bg-gray-400 p-2.5 sm:m-0 sm:w-1/3 sm:p-0">
                         <a href="#slide020101" data-custom-open="modal0201"><img src="../dist/img/main/create/01.png" alt="약속생성" width="100%" /></a>
                     </div>
-                    <div class="grid-item sm:w-1/3 main create m-2.5 sm:m-0 h-auto w-[240px] bg-gray-400 p-2.5 sm:p-0">
+                    <div class="grid-item main create m-2.5 h-auto w-[240px] bg-gray-400 p-2.5 sm:m-0 sm:w-1/3 sm:p-0">
                         <a href="#slide020102" data-custom-open="modal0201"><img src="../dist/img/main/create/02.png" alt="약속생성" width="100%" /></a>
                     </div>
-                    <div class="grid-item sm:w-1/3 main create m-2.5 sm:m-0 h-auto w-[240px] bg-gray-400 p-2.5 sm:p-0">
+                    <div class="grid-item main create m-2.5 h-auto w-[240px] bg-gray-400 p-2.5 sm:m-0 sm:w-1/3 sm:p-0">
                         <a href="#slide020103" data-custom-open="modal0201"><img src="../dist/img/main/create/03.png" alt="약속생성" width="100%" /></a>
                     </div>
 
-                    <div class="grid-item sm:w-1/3 main amount m-2.5 sm:m-0 h-auto w-[240px] bg-gray-400 p-2.5 sm:p-0">
+                    <div class="grid-item main amount m-2.5 h-auto w-[240px] bg-gray-400 p-2.5 sm:m-0 sm:w-1/3 sm:p-0">
                         <a href="#slide020201" data-custom-open="modal0202"><img src="../dist/img/main/create/amount/01.png" alt="약속생성 인원금액" width="100%" /></a>
                     </div>
-                    <div class="grid-item sm:w-1/3 main amount m-2.5 sm:m-0 h-auto w-[240px] bg-gray-400 p-2.5 sm:p-0">
+                    <div class="grid-item main amount m-2.5 h-auto w-[240px] bg-gray-400 p-2.5 sm:m-0 sm:w-1/3 sm:p-0">
                         <a href="#slide020202" data-custom-open="modal0202"><img src="../dist/img/main/create/amount/02.png" alt="약속생성 인원금액" width="100%" /></a>
                     </div>
-                    <div class="grid-item sm:w-1/3 main amount m-2.5 sm:m-0 h-auto w-[240px] bg-gray-400 p-2.5 sm:p-0">
+                    <div class="grid-item main amount m-2.5 h-auto w-[240px] bg-gray-400 p-2.5 sm:m-0 sm:w-1/3 sm:p-0">
                         <a href="#slide020203" data-custom-open="modal0202"><img src="../dist/img/main/create/amount/03.png" alt="약속생성 인원금액" width="100%" /></a>
                     </div>
 
-                    <div class="grid-item sm:w-1/3 main m-return m-2.5 sm:m-0 h-auto w-[240px] bg-gray-400 p-2.5 sm:p-0">
+                    <div class="grid-item main m-return m-2.5 h-auto w-[240px] bg-gray-400 p-2.5 sm:m-0 sm:w-1/3 sm:p-0">
                         <a href="#slide020301" data-custom-open="modal0203"><img src="../dist/img/main/create/return/01.png" alt="약속생성 반환조건" width="100%" /></a>
                     </div>
-                    <div class="grid-item sm:w-1/3 main m-return m-2.5 sm:m-0 h-auto w-[240px] bg-gray-400 p-2.5 sm:p-0">
+                    <div class="grid-item main m-return m-2.5 h-auto w-[240px] bg-gray-400 p-2.5 sm:m-0 sm:w-1/3 sm:p-0">
                         <a href="#slide020301" data-custom-open="modal0203"><img src="../dist/img/main/create/return/02.png" alt="약속생성 반환조건" width="100%" /></a>
                     </div>
 
-                    <div class="grid-item sm:w-1/3 main m-url m-2.5 sm:m-0 h-auto w-[240px] bg-gray-400 p-2.5 sm:p-0">
+                    <div class="grid-item main m-url m-2.5 h-auto w-[240px] bg-gray-400 p-2.5 sm:m-0 sm:w-1/3 sm:p-0">
                         <a href="#slide020401" data-custom-open="modal0204"><img src="../dist/img/main/create/url/01.png" alt="약속생성 url생성" width="100%" /></a>
                     </div>
-                    <div class="grid-item sm:w-1/3 main m-url m-2.5 sm:m-0 h-auto w-[240px] bg-gray-400 p-2.5 sm:p-0">
+                    <div class="grid-item main m-url m-2.5 h-auto w-[240px] bg-gray-400 p-2.5 sm:m-0 sm:w-1/3 sm:p-0">
                         <a href="#slide020402" data-custom-open="modal0204"><img src="../dist/img/main/create/url/02.png" alt="약속생성 url생성" width="100%" /></a>
                     </div>
-                    <div class="grid-item sm:w-1/3 main m-url m-2.5 sm:m-0 h-auto w-[240px] bg-gray-400 p-2.5 sm:p-0">
+                    <div class="grid-item main m-url m-2.5 h-auto w-[240px] bg-gray-400 p-2.5 sm:m-0 sm:w-1/3 sm:p-0">
                         <a href="#slide020403" data-custom-open="modal0204"><img src="../dist/img/main/create/url/03.png" alt="약속생성 url생성" width="100%" /></a>
                     </div>
                     <!-- //main -->
 
-                    <div class="grid-item sm:w-1/3 promise detail manage m-2.5 sm:m-0 h-auto w-[240px] bg-gray-400 p-2.5 sm:p-0">
+                    <div class="grid-item promise detail manage m-2.5 h-auto w-[240px] bg-gray-400 p-2.5 sm:m-0 sm:w-1/3 sm:p-0">
                         <a href="#slide030101" data-custom-open="modal0301"><img src="../dist/img/promise/detail/manage/01.png" alt="약속관리" width="100%" /></a>
                     </div>
-                    <div class="grid-item sm:w-1/3 promise detail manage m-2.5 sm:m-0 h-auto w-[240px] bg-gray-400 p-2.5 sm:p-0">
+                    <div class="grid-item promise detail manage m-2.5 h-auto w-[240px] bg-gray-400 p-2.5 sm:m-0 sm:w-1/3 sm:p-0">
                         <a href="#slide030102" data-custom-open="modal0301"><img src="../dist/img/promise/detail/manage/02.png" alt="약속관리" width="100%" /></a>
                     </div>
-                    <div class="grid-item sm:w-1/3 promise detail manage m-2.5 sm:m-0 h-auto w-[240px] bg-gray-400 p-2.5 sm:p-0">
+                    <div class="grid-item promise detail manage m-2.5 h-auto w-[240px] bg-gray-400 p-2.5 sm:m-0 sm:w-1/3 sm:p-0">
                         <a href="#slide030103" data-custom-open="modal0301"><img src="../dist/img/promise/detail/manage/03.png" alt="약속관리" width="100%" /></a>
                     </div>
-                    <div class="grid-item sm:w-1/3 promise detail m-2.5 sm:m-0 h-auto w-[240px] bg-gray-400 p-2.5 sm:p-0">
+                    <div class="grid-item promise detail m-2.5 h-auto w-[240px] bg-gray-400 p-2.5 sm:m-0 sm:w-1/3 sm:p-0">
                         <a href="#slide030104" data-custom-open="modal0301"><img src="../dist/img/promise/detail/01.png" alt="약속상세 10인이하모임" width="100%" /></a>
                     </div>
-                    <div class="grid-item sm:w-1/3 promise detail m-2.5 sm:m-0 h-auto w-[240px] bg-gray-400 p-2.5 sm:p-0">
+                    <div class="grid-item promise detail m-2.5 h-auto w-[240px] bg-gray-400 p-2.5 sm:m-0 sm:w-1/3 sm:p-0">
                         <a href="#slide030105" data-custom-open="modal0301"><img src="../dist/img/promise/detail/02.png" alt="약속상세 10인이하모임" width="100%" /></a>
                     </div>
 
-                    <div class="grid-item sm:w-1/3 promise p-return m-2.5 sm:m-0 h-auto w-[240px] bg-gray-400 p-2.5 sm:p-0">
+                    <div class="grid-item promise p-return m-2.5 h-auto w-[240px] bg-gray-400 p-2.5 sm:m-0 sm:w-1/3 sm:p-0">
                         <a href="#slide030301" data-custom-open="modal0303"><img src="../dist/img/promise/return/01.png" alt="약속상세 반환 호스트" width="100%" /></a>
                     </div>
-                    <div class="grid-item sm:w-1/3 promise p-return m-2.5 sm:m-0 h-auto w-[240px] bg-gray-400 p-2.5 sm:p-0">
+                    <div class="grid-item promise p-return m-2.5 h-auto w-[240px] bg-gray-400 p-2.5 sm:m-0 sm:w-1/3 sm:p-0">
                         <a href="#slide030302" data-custom-open="modal0303"><img src="../dist/img/promise/return/02.png" alt="약속상세 반환" width="100%" /></a>
                     </div>
-                    <div class="grid-item sm:w-1/3 promise p-return m-2.5 sm:m-0 h-auto w-[240px] bg-gray-400 p-2.5 sm:p-0">
+                    <div class="grid-item promise p-return m-2.5 h-auto w-[240px] bg-gray-400 p-2.5 sm:m-0 sm:w-1/3 sm:p-0">
                         <a href="#slide030303" data-custom-open="modal0303"><img src="../dist/img/promise/return/03.png" alt="약속상세 반환" width="100%" /></a>
                     </div>
 
-                    <div class="grid-item sm:w-1/3 promise cancel m-2.5 sm:m-0 h-auto w-[240px] bg-gray-400 p-2.5 sm:p-0">
+                    <div class="grid-item promise cancel m-2.5 h-auto w-[240px] bg-gray-400 p-2.5 sm:m-0 sm:w-1/3 sm:p-0">
                         <a href="#slide030201" data-custom-open="modal0302"><img src="../dist/img/promise/cancel/01.png" alt="약속취소" width="100%" /></a>
                     </div>
-                    <div class="grid-item sm:w-1/3 promise cancel m-2.5 sm:m-0 h-auto w-[240px] bg-gray-400 p-2.5 sm:p-0">
+                    <div class="grid-item promise cancel m-2.5 h-auto w-[240px] bg-gray-400 p-2.5 sm:m-0 sm:w-1/3 sm:p-0">
                         <a href="#slide030202" data-custom-open="modal0302"><img src="../dist/img/promise/cancel/02.png" alt="약속취소" width="100%" /></a>
                     </div>
-                    <div class="grid-item sm:w-1/3 promise cancel m-2.5 sm:m-0 h-auto w-[240px] bg-gray-400 p-2.5 sm:p-0">
+                    <div class="grid-item promise cancel m-2.5 h-auto w-[240px] bg-gray-400 p-2.5 sm:m-0 sm:w-1/3 sm:p-0">
                         <a href="#slide030202" data-custom-open="modal0302"><img src="../dist/img/promise/cancel/03.png" alt="약속취소" width="100%" /></a>
                     </div>
                     <!-- //promise -->
 
-                    <div class="grid-item sm:w-1/3 mypage my-main m-2.5 sm:m-0 h-auto w-[240px] bg-gray-400 p-2.5 sm:p-0">
+                    <div class="grid-item mypage my-main m-2.5 h-auto w-[240px] bg-gray-400 p-2.5 sm:m-0 sm:w-1/3 sm:p-0">
                         <a href="#slide040101" data-custom-open="modal0401"><img src="../dist/img/mypage/01.png" alt="마이페이지" width="100%" /></a>
                     </div>
-                    <div class="grid-item sm:w-1/3 mypage my-main m-2.5 sm:m-0 h-auto w-[240px] bg-gray-400 p-2.5 sm:p-0">
+                    <div class="grid-item mypage my-main m-2.5 h-auto w-[240px] bg-gray-400 p-2.5 sm:m-0 sm:w-1/3 sm:p-0">
                         <a href="#slide040102" data-custom-open="modal0401"><img src="../dist/img/mypage/02.png" alt="마이페이지" width="100%" /></a>
                     </div>
 
-                    <div class="grid-item sm:w-1/3 mypage bank my-connect m-2.5 sm:m-0 h-auto w-[240px] bg-gray-400 p-2.5 sm:p-0">
+                    <div class="grid-item mypage bank my-connect m-2.5 h-auto w-[240px] bg-gray-400 p-2.5 sm:m-0 sm:w-1/3 sm:p-0">
                         <a href="#slide040301" data-custom-open="modal0403"><img src="../dist/img/mypage/bank/connect/01.png" alt="마이페이지 계좌연결" width="100%" /></a>
                     </div>
-                    <div class="grid-item sm:w-1/3 mypage bank my-connect m-2.5 sm:m-0 h-auto w-[240px] bg-gray-400 p-2.5 sm:p-0">
+                    <div class="grid-item mypage bank my-connect m-2.5 h-auto w-[240px] bg-gray-400 p-2.5 sm:m-0 sm:w-1/3 sm:p-0">
                         <a href="#slide040302" data-custom-open="modal0403"><img src="../dist/img/mypage/bank/connect/02.png" alt="마이페이지 계좌연결" width="100%" /></a>
                     </div>
 
-                    <div class="grid-item sm:w-1/3 mypage bank my-setting m-2.5 sm:m-0 h-auto w-[240px] bg-gray-400 p-2.5 sm:p-0">
+                    <div class="grid-item mypage bank my-setting m-2.5 h-auto w-[240px] bg-gray-400 p-2.5 sm:m-0 sm:w-1/3 sm:p-0">
                         <a href="#slide040201" data-custom-open="modal0402"><img src="../dist/img/mypage/bank/setting/01.png" alt="마이페이지 계좌설정" width="100%" /></a>
                     </div>
-                    <div class="grid-item sm:w-1/3 mypage bank my-setting m-2.5 sm:m-0 h-auto w-[240px] bg-gray-400 p-2.5 sm:p-0">
+                    <div class="grid-item mypage bank my-setting m-2.5 h-auto w-[240px] bg-gray-400 p-2.5 sm:m-0 sm:w-1/3 sm:p-0">
                         <a href="#slide040202" data-custom-open="modal0402"><img src="../dist/img/mypage/bank/setting/02.png" alt="마이페이지 계좌설정" width="100%" /></a>
                     </div>
                     <!-- //mypage -->
 
-                    <div class="grid-item sm:w-1/3 customer m-2.5 sm:m-0 h-auto w-[240px] bg-gray-400 p-2.5 sm:p-0">
+                    <div class="grid-item customer m-2.5 h-auto w-[240px] bg-gray-400 p-2.5 sm:m-0 sm:w-1/3 sm:p-0">
                         <a href="#slide0501" data-custom-open="modal05"><img src="../dist/img/customer/01.png" alt="고객센터" width="100%" /></a>
                     </div>
-                    <div class="grid-item sm:w-1/3 customer m-2.5 sm:m-0 h-auto w-[240px] bg-gray-400 p-2.5 sm:p-0">
+                    <div class="grid-item customer m-2.5 h-auto w-[240px] bg-gray-400 p-2.5 sm:m-0 sm:w-1/3 sm:p-0">
                         <a href="#slide0502" data-custom-open="modal05"><img src="../dist/img/customer/02.png" alt="고객센터" width="100%" /></a>
                     </div>
-                    <div class="grid-item sm:w-1/3 customer m-2.5 sm:m-0 h-auto w-[240px] bg-gray-400 p-2.5 sm:p-0">
+                    <div class="grid-item customer m-2.5 h-auto w-[240px] bg-gray-400 p-2.5 sm:m-0 sm:w-1/3 sm:p-0">
                         <a href="#slide0503" data-custom-open="modal05"><img src="../dist/img/customer/03.png" alt="고객센터" width="100%" /></a>
                     </div>
-                    <div class="grid-item sm:w-1/3 customer m-2.5 sm:m-0 h-auto w-[240px] bg-gray-400 p-2.5 sm:p-0">
+                    <div class="grid-item customer m-2.5 h-auto w-[240px] bg-gray-400 p-2.5 sm:m-0 sm:w-1/3 sm:p-0">
                         <a href="#slide0504" data-custom-open="modal05"><img src="../dist/img/customer/04.png" alt="고객센터" width="100%" /></a>
                     </div>
                     <!-- //customer -->
@@ -252,16 +251,17 @@
             <section class="modal-gruop fixed bottom-0 left-0 z-30 w-full bg-white">
                 <div id="modal0101" class="micromodal-slide" aria-hidden="true">
                     <div class="modal__overlay" tabindex="-1" data-custom-close>
-                        <div class="modal__container">
+                        <div class="modal__container sm:p-0">
                             <img src="../dist/img/member/01.png" alt="가입완료" />
                         </div>
                     </div>
+
                 </div>
                 <!-- // -->
 
                 <div id="modal0102" class="micromodal-slide" aria-hidden="true">
                     <div class="modal__overlay" tabindex="-1" data-custom-close>
-                        <div class="modal__container">
+                        <div class="modal__container sm:p-0">
                             <div class="swiper members2">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide" data-hash="slide010201"><img src="../dist/img/member/s_join/01.png" alt="간편가입" /></div>
@@ -279,7 +279,7 @@
                 <!-- // -->
                 <div id="modal0103" class="micromodal-slide" aria-hidden="true">
                     <div class="modal__overlay" tabindex="-1" data-custom-close>
-                        <div class="modal__container">
+                        <div class="modal__container sm:p-0">
                             <div class="swiper members3">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide" data-hash="slide010301"><img src="../dist/img/member/join/01.png" alt="가입" /></div>
@@ -297,7 +297,7 @@
 
                 <div id="modal0201" class="micromodal-slide" aria-hidden="true">
                     <div class="modal__overlay" tabindex="-1" data-custom-close>
-                        <div class="modal__container">
+                        <div class="modal__container sm:p-0">
                             <div class="swiper members3">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide" data-hash="slide020101"><img src="../dist/img/main/create/01.png" alt="약속생성" /></div>
@@ -315,7 +315,7 @@
 
                 <div id="modal0202" class="micromodal-slide" aria-hidden="true">
                     <div class="modal__overlay" tabindex="-1" data-custom-close>
-                        <div class="modal__container">
+                        <div class="modal__container sm:p-0">
                             <div class="swiper members3">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide" data-hash="slide020201"><img src="../dist/img/main/create/amount/01.png" alt="약속생성 인원금액" /></div>
@@ -333,7 +333,7 @@
 
                 <div id="modal0203" class="micromodal-slide" aria-hidden="true">
                     <div class="modal__overlay" tabindex="-1" data-custom-close>
-                        <div class="modal__container">
+                        <div class="modal__container sm:p-0">
                             <div class="swiper members3">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide" data-hash="slide020301"><img src="../dist/img/main/create/return/01.png" alt="약속생성 반환조건" /></div>
@@ -350,7 +350,7 @@
 
                 <div id="modal0204" class="micromodal-slide" aria-hidden="true">
                     <div class="modal__overlay" tabindex="-1" data-custom-close>
-                        <div class="modal__container">
+                        <div class="modal__container sm:p-0">
                             <div class="swiper members3">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide" data-hash="slide020401"><img src="../dist/img/main/create/url/01.png" alt="약속생성 url생성" /></div>
@@ -368,7 +368,7 @@
 
                 <div id="modal0301" class="micromodal-slide" aria-hidden="true">
                     <div class="modal__overlay" tabindex="-1" data-custom-close>
-                        <div class="modal__container">
+                        <div class="modal__container sm:p-0">
                             <div class="swiper members3">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide" data-hash="slide030101"><img src="../dist/img/promise/detail/manage/01.png" alt="약속관리" /></div>
@@ -387,7 +387,7 @@
                 <!-- // -->
                 <div id="modal0302" class="micromodal-slide" aria-hidden="true">
                     <div class="modal__overlay" tabindex="-1" data-custom-close>
-                        <div class="modal__container">
+                        <div class="modal__container sm:p-0">
                             <div class="swiper members3">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide" data-hash="slide030201"><img src="../dist/img/promise/cancel/01.png" alt="약속취소" width="100%" /></div>
@@ -402,11 +402,10 @@
                     </div>
                 </div>
                 <!-- // -->
-                
 
                 <div id="modal0303" class="micromodal-slide" aria-hidden="true">
                     <div class="modal__overlay" tabindex="-1" data-custom-close>
-                        <div class="modal__container">
+                        <div class="modal__container sm:p-0">
                             <div class="swiper members3">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide" data-hash="slide030301"><img src="../dist/img/promise/return/01.png" alt="약속상세 반환 호스트" /></div>
@@ -424,11 +423,11 @@
 
                 <div id="modal0401" class="micromodal-slide" aria-hidden="true">
                     <div class="modal__overlay" tabindex="-1" data-custom-close>
-                        <div class="modal__container">
+                        <div class="modal__container sm:p-0">
                             <div class="swiper members3">
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slide" data-hash="slide040101"><img src="../dist/img/mypage/01.png" alt=""></div>
-                                    <div class="swiper-slide" data-hash="slide040102"><img src="../dist/img/mypage/02.png" alt=""></div>
+                                    <div class="swiper-slide" data-hash="slide040101"><img src="../dist/img/mypage/01.png" alt="" /></div>
+                                    <div class="swiper-slide" data-hash="slide040102"><img src="../dist/img/mypage/02.png" alt="" /></div>
                                 </div>
                             </div>
                             <div class="swiper-button-next"></div>
@@ -441,11 +440,11 @@
 
                 <div id="modal0402" class="micromodal-slide" aria-hidden="true">
                     <div class="modal__overlay" tabindex="-1" data-custom-close>
-                        <div class="modal__container">
+                        <div class="modal__container sm:p-0">
                             <div class="swiper members3">
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slide" data-hash="slide040201"><img src="../dist/img/mypage/bank/setting/01.png" alt=""></div>
-                                    <div class="swiper-slide" data-hash="slide040202"><img src="../dist/img/mypage/bank/setting/02.png" alt=""></div>
+                                    <div class="swiper-slide" data-hash="slide040201"><img src="../dist/img/mypage/bank/setting/01.png" alt="" /></div>
+                                    <div class="swiper-slide" data-hash="slide040202"><img src="../dist/img/mypage/bank/setting/02.png" alt="" /></div>
                                 </div>
                             </div>
                             <div class="swiper-button-next"></div>
@@ -458,11 +457,11 @@
 
                 <div id="modal0403" class="micromodal-slide" aria-hidden="true">
                     <div class="modal__overlay" tabindex="-1" data-custom-close>
-                        <div class="modal__container">
+                        <div class="modal__container sm:p-0">
                             <div class="swiper members3">
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slide" data-hash="slide040301"><img src="../dist/img/mypage/bank/connect/01.png" alt=""></div>
-                                    <div class="swiper-slide" data-hash="slide040302"><img src="../dist/img/mypage/bank/connect/02.png" alt=""></div>
+                                    <div class="swiper-slide" data-hash="slide040301"><img src="../dist/img/mypage/bank/connect/01.png" alt="" /></div>
+                                    <div class="swiper-slide" data-hash="slide040302"><img src="../dist/img/mypage/bank/connect/02.png" alt="" /></div>
                                 </div>
                             </div>
                             <div class="swiper-button-next"></div>
@@ -475,23 +474,23 @@
 
                 <div id="modal05" class="micromodal-slide" aria-hidden="true">
                     <div class="modal__overlay" tabindex="-1" data-custom-close>
-                        <div class="modal__container">
+                        <div class="modal__container sm:p-0">
                             <div class="swiper members3">
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slide" data-hash="slide0501"><img src="../dist/img/customer/01.png" alt=""></div>
-                                    <div class="swiper-slide" data-hash="slide0502"><img src="../dist/img/customer/02.png" alt=""></div>
-                                    <div class="swiper-slide" data-hash="slide0503"><img src="../dist/img/customer/03.png" alt=""></div>
-                                    <div class="swiper-slide" data-hash="slide0504"><img src="../dist/img/customer/04.png" alt=""></div>
+                                    <div class="swiper-slide" data-hash="slide0501"><img src="../dist/img/customer/01.png" alt="" /></div>
+                                    <div class="swiper-slide" data-hash="slide0502"><img src="../dist/img/customer/02.png" alt="" /></div>
+                                    <div class="swiper-slide" data-hash="slide0503"><img src="../dist/img/customer/03.png" alt="" /></div>
+                                    <div class="swiper-slide" data-hash="slide0504"><img src="../dist/img/customer/04.png" alt="" /></div>
                                 </div>
                             </div>
                             <div class="swiper-button-next"></div>
                             <div class="swiper-button-prev"></div>
                             <!-- // -->
+                            
                         </div>
                     </div>
                 </div>
                 <!-- // -->
-                
 
                 <script>
                     MicroModal.init({
@@ -524,6 +523,47 @@
                     });
                 </script>
             </section>
+
+            <div class="sm-bg fixed top-0 left-0 z-[11] hidden h-full w-full bg-black opacity-70 transition-all duration-200"></div>
+            <div class="fixed right-2.5 top-2.5 z-[20] hidden sm-close-button transition-all duration-200">
+                <button class="sm-close text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-8 w-8">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="g-menu fixed top-0 left-0 z-10 h-10 w-full bg-white bg-opacity-80 px-[15px] pt-1 hidden sm:block">
+                <a href="javascript:;">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-8 w-8">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </a>
+            </div>
+
+            <script>
+                const gmenu = document.querySelector('.g-menu a');
+                const header = document.querySelector('header');
+                const closeButton = document.querySelectorAll('.sm-close');
+
+                gmenu.addEventListener('click', event => {
+                    header.classList.remove('sm:left-[-250px]');
+                    header.classList.add('sm:left-0');
+                    document.querySelector('.sm-bg').classList.remove('hidden');
+                    document.querySelector('.sm-close-button').classList.remove('hidden');
+                });
+
+                for(i=0; i<closeButton.length; i++){
+                    const _this = closeButton[i];
+
+                    _this.addEventListener('click', event => {
+                        header.classList.remove('sm:left-0');
+                        header.classList.add('sm:left-[-250px]');
+                        document.querySelector('.sm-bg').classList.add('hidden');
+                        document.querySelector('.sm-close-button').classList.add('hidden');
+                    })
+                }
+            </script>
         </div>
         <!-- //nsn -->
     </body>
