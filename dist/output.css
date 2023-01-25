@@ -931,6 +931,10 @@ html {
   top: 0.5rem;
 }
 
+.top-\[-40px\] {
+  top: -40px;
+}
+
 .top-\[50\%\] {
   top: 50%;
 }
@@ -941,22 +945,6 @@ html {
 
 .top-6 {
   top: 1.5rem;
-}
-
-.top-\[-\] {
-  top: -;
-}
-
-.top-\[\] {
-  top: ;
-}
-
-.top-\[-40\] {
-  top: -40;
-}
-
-.top-\[-40px\] {
-  top: -40px;
 }
 
 .isolate {
@@ -1663,20 +1651,16 @@ html {
   transition-duration: 200ms;
 }
 
+.duration-500 {
+  transition-duration: 500ms;
+}
+
 .duration-100 {
   transition-duration: 100ms;
 }
 
 .duration-75 {
   transition-duration: 75ms;
-}
-
-.duration-300 {
-  transition-duration: 300ms;
-}
-
-.duration-500 {
-  transition-duration: 500ms;
 }
 
 .ease-out {
@@ -1718,6 +1702,9 @@ html {
 }
 
 .swiper-wrapper .siwper-slide {
+}
+
+.swiper-wrapper .siwper-slide img{
 }
 
 .after\:absolute::after {
@@ -1997,12 +1984,12 @@ html {
     left: -250px;
   }
 
-  .sm\:left-0 {
-    left: 0px;
-  }
-
   .sm\:top-0 {
     top: 0px;
+  }
+
+  .sm\:left-0 {
+    left: 0px;
   }
 
   .sm\:m-0 {
