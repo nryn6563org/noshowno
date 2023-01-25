@@ -1003,6 +1003,10 @@ html {
   z-index: 20;
 }
 
+.z-50 {
+  z-index: 50;
+}
+
 .m-2\.5 {
   margin: 0.625rem;
 }
@@ -1411,6 +1415,10 @@ html {
 
 .bg-opacity-80 {
   --tw-bg-opacity: 0.8;
+}
+
+.bg-opacity-60 {
+  --tw-bg-opacity: 0.6;
 }
 
 .p-10 {
