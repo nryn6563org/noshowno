@@ -31,6 +31,8 @@
 }
 .swiper-wrapper {
     align-items: center;
+    gap:0;
+    padding:0;
 }
 
 .swiper-wrapper .siwper-slide {
