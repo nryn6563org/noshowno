@@ -770,32 +770,6 @@ html {
   transition: all 0.5s ease-in-out;
 }
 
-.modal{
-  display:none;
-}
-
-.modal.is-open{
-  display:block;
-}
-
-.modal__container{
-  width:475px;
-  padding:0 50px;
-}
-
-.swiper{
-}
-
-.swiper::-webkit-scrollbar{
-}
-
-.swiper-wrapper{
-  align-items: center;
-}
-
-.swiper-wrapper .siwper-slide{
-}
-
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -892,36 +866,6 @@ html {
 
 .container {
   width: 100%;
-}
-
-@media (min-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
-  }
 }
 
 .fixed {
@@ -1371,6 +1315,36 @@ html {
   --tw-shadow: var(--tw-shadow-colored);
 }
 
+.is-active::after {
+  height: 100%;
+}
+
+.modal {
+  display: none;
+}
+
+.modal.is-open {
+  display: block;
+}
+
+.modal__container {
+  width: 475px;
+  padding: 0 50px;
+}
+
+.swiper {
+}
+
+.swiper::-webkit-scrollbar {
+}
+
+.swiper-wrapper {
+  align-items: center;
+}
+
+.swiper-wrapper .siwper-slide {
+}
+
 .after\:absolute::after {
   content: var(--tw-content);
   position: absolute;
@@ -1516,4 +1490,18 @@ html {
 .dark .dark\:border-\[\#787878\] {
   --tw-border-opacity: 1;
   border-color: rgb(120 120 120 / var(--tw-border-opacity));
+}
+
+@media (max-width: 639px) {
+  .sm\:m-0 {
+    margin: 0px;
+  }
+
+  .sm\:w-1\/3 {
+    width: 33.333333%;
+  }
+
+  .sm\:p-0 {
+    padding: 0px;
+  }
 }

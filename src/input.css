@@ -8,31 +8,30 @@
         font-family: 'Nanum Gothic', sans-serif;
         transition: all 0.5s ease-in-out;
     }
+}
+.is-active::after {
+    height: 100%;
+}
 
-    .is-active::after{
-      height:100%;
-    }
+.modal {
+    display: none;
+}
+.modal.is-open {
+    display: block;
+}
 
-    .modal{
-      display:none;
-    }
-    .modal.is-open{
-      display:block;
-    }
+.modal__container {
+    width: 475px;
+    padding: 0 50px;
+}
 
-    .modal__container{
-      width:475px;
-      padding:0 50px;
-    }
-    
-    .swiper{
-    }
-    .swiper::-webkit-scrollbar{
-    }
-    .swiper-wrapper{
-      align-items: center;
-    }
+.swiper {
+}
+.swiper::-webkit-scrollbar {
+}
+.swiper-wrapper {
+    align-items: center;
+}
 
-    .swiper-wrapper .siwper-slide{
-    } 
+.swiper-wrapper .siwper-slide {
 }
