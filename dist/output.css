@@ -1144,6 +1144,18 @@ html {
   width: 9rem;
 }
 
+.max-w-\[\] {
+  max-width: ;
+}
+
+.max-w-\[3\] {
+  max-width: 3;
+}
+
+.max-w-\[375px\] {
+  max-width: 375px;
+}
+
 .flex-none {
   flex: none;
 }
